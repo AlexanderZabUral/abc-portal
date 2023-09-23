@@ -1,0 +1,14 @@
+.change-banner {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.img-thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+.col-image {
+  padding: 10px;
+}

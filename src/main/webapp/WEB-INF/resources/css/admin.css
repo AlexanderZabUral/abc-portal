@@ -1,0 +1,64 @@
+body {
+  background-color: aliceblue;
+}
+
+.sidebar {
+  margin: 0;
+  width: 350px;
+  padding: 30px;
+  background-color: rgb(50, 61, 95);
+  color: white;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar .header {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  margin-left: 350px;
+  height: 70px;
+  background-color: white;
+  box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.admin-text-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  .sidebar .header,
+  .content-header {
+    display: none;
+  }
+}

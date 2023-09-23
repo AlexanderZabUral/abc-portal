@@ -1,0 +1,59 @@
+.hero-content .heading {
+  min-width: 550px;
+  max-width: 600px;
+}
+
+/* Partners */
+#partners {
+  background-color: #f3f2f0;
+}
+
+.partner img {
+  width: 200px;
+}
+
+/* Topics */
+.topic-tag {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.topic-tag:hover {
+  background-color: #eeeeee;
+}
+
+/* Featured Jobs */
+.job-container {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  width: 60px;
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    min-width: 300px;
+    max-width: 600px;
+  }
+
+  .hero-content .heading {
+    min-width: auto;
+    max-width: auto;
+  }
+
+  .partner img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partner img {
+    width: 100px;
+  }
+}
