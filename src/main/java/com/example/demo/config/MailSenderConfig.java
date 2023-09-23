@@ -29,7 +29,7 @@ public class MailSenderConfig {
 		props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 
 		mailSender.setJavaMailProperties(props);
-		mailSender.setUsername("uppsasha2016@gmail.com"); 
+		mailSender.setUsername("--------------@gmail.com"); 
 		mailSender.setPassword("ybnbedislwmtsrbi"); 
 
 		return mailSender;
