@@ -3,6 +3,7 @@ package com.example.demo.register;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,13 +22,17 @@ public class RegisterService {
 
 	@Autowired
 	JobRepository jobRepo;
+	
+	@Autowired
+	PasswordEncoder passwordEncoder;
 
 	public void saveRegister(User regUser) {
 		User user = new User();
 		UserProfile profile = new UserProfile();
 
 		user.setEmail(regUser.getEmail());
-		user.setPassword(regUser.getPassword());
+		//хешируем пароль
+		user.setPassword(passwordEncoder.encode(regUser.getPassword()));
 		user.setEnabled(true);
 		
 		profile.setFirst_name(regUser.getProfile().getFirst_name());
@@ -65,3 +70,4 @@ public class RegisterService {
 	}
 
 }
+
