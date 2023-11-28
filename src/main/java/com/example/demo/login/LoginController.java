@@ -20,6 +20,9 @@ public class LoginController {
 
 	@Autowired
 	LoginService loginService;
+
+	@Autowired
+	PasswordEncoder passwordEncoder;
 	
 	@RequestMapping("/login")
 	public ModelAndView loginpage() {
@@ -46,7 +49,13 @@ public class LoginController {
 				return "login";
 			}
 
-			if (profile.getUser().getPassword().equals(user.getPassword())) {
+		       /////////////проверка хеша///////////////////	
+			
+			String existingPassword = user.getPassword();
+			String dbPassword = profile.getUser().getPassword();
+			boolean passhack = passwordEncoder.matches(existingPassword, dbPassword);
+			
+			if (passhack) {
 				session.setAttribute("profile", profile);
 			} else {
 				model.addAttribute("message", "Wrong password, please try again.");
